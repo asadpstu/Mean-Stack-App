@@ -12,5 +12,6 @@ router.get('/all-post', Post.allpost);
 router.get('/search-post/:id', Post.serachPost);
 router.post('/create/new', Post.singlePost);
 router.put('/search-update/:id', Post.serachAndUpdate);
+router.delete('/remove/:id',Post.DeleteObject);
 
 module.exports = router;

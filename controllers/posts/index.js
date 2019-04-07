@@ -69,10 +69,26 @@ var serachAndUpdate = function(req,res){
     })
 }
 
+
+//Delete 
+var DeleteObject = function(req,res){
+    Post.findByIdAndRemove(req.params.id,function(err,post){
+        if(err){
+            res.send(500,"Can't Delete - "+err);
+        }
+        else
+        {
+            res.send(200,"Deleted")
+        }
+    })
+}
+
+
 module.exports ={
     singlePost,
     allpost,
     serachPost,
-    serachAndUpdate
+    serachAndUpdate,
+    DeleteObject
 
 }
