@@ -9,6 +9,8 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/all-post', Post.allpost);
+router.get('/search-post/:id', Post.serachPost);
 router.post('/create/new', Post.singlePost);
+router.put('/search-update/:id', Post.serachAndUpdate);
 
 module.exports = router;
