@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var baseUrl = process.env.PWD;
+
 var Post = require('../controllers/posts');
 
 /* Create new */

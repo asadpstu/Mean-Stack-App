@@ -5,12 +5,14 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 
+
 //Creating Api end Point//
 var routeEndPoint = require('./routes');
 
 
 var bodyParser = require('body-parser')
 var mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
 var config = require('./config');
 
 var app = express();

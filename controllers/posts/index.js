@@ -1,4 +1,3 @@
-
 var Post = require('../../models/posts');
 
 //insert data
