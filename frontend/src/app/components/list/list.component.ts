@@ -16,7 +16,7 @@ import { Router } from '@angular/router';
 export class ListComponent implements OnInit {
 
   posts : Post[];
-  columnsToDisplay = ['title', 'body', 'author','comments','likes','actions'];
+  columnsToDisplay = ['title', 'body', 'author','price','edition','actions'];
   //Dependency Injection
   constructor(private firstService: FirstService,private router: Router) { }
 
