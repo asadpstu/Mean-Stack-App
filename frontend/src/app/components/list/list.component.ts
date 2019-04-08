@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FirstService } from '../../first.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+
+  //Dependency Injection
+  constructor(private firstService: FirstService,private router: Router) { }
 
   ngOnInit() {
+    this.firstService
+    .getlistFirstService()
+    .subscribe((data) => {
+      console.log('Retriving all data list');
+      console.log(data);
+    });
   }
 
 }

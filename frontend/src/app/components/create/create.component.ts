@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FirstService } from '../../first.service';
 
 @Component({
   selector: 'app-create',
@@ -6,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create.component.css']
 })
 export class CreateComponent implements OnInit {
-
-  constructor() { }
+  
+  //Dependency Injection
+  constructor(private FirstService: FirstService) { }
 
   ngOnInit() {
   }

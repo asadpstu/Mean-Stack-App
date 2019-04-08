@@ -11,6 +11,12 @@ import { MatToolbarModule } from '@angular/material';
 //Adding Route
 import { RouterModule, Routes } from '@angular/router';
 
+//Adding FirstService 
+import { FirstService } from './first.service';
+
+//Add http module
+import { HttpClientModule } from '@angular/common/http';
+
 const routes: Routes = [
   { path: 'create', component: CreateComponent },
   { path: 'edit/:id', component: EditComponent },
@@ -30,9 +36,10 @@ const routes: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+    HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [FirstService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
