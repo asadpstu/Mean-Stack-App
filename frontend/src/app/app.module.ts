@@ -6,7 +6,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListComponent } from './components/list/list.component';
 import { CreateComponent } from './components/create/create.component';
 import { EditComponent } from './components/edit/edit.component';
-import { MatToolbarModule } from '@angular/material';
+import {  MatToolbarModule, 
+          MatFormFieldModule, 
+          MatInputModule, 
+          MatOptionModule, 
+          MatSelectModule, 
+          MatIconModule, 
+          MatButtonModule, 
+          MatCardModule, 
+          MatTableModule, 
+          MatDividerModule, 
+          MatSnackBarModule } from '@angular/material';
 
 //Adding Route
 import { RouterModule, Routes } from '@angular/router';
@@ -35,9 +45,19 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    MatToolbarModule, 
+    MatFormFieldModule, 
+    MatInputModule, 
+    MatOptionModule, 
+    MatSelectModule, 
+    MatIconModule, 
+    MatButtonModule, 
+    MatCardModule, 
+    MatTableModule, 
+    MatDividerModule, 
+    MatSnackBarModule    
   ],
   providers: [FirstService],
   bootstrap: [AppComponent]

@@ -1,5 +1,11 @@
+import { Post } from './../../Post.model';
 import { Component, OnInit } from '@angular/core';
 import { FirstService } from '../../first.service';
+
+import { MatTableDataSource } from '@angular/material';
+
+
+
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,17 +15,27 @@ import { Router } from '@angular/router';
 })
 export class ListComponent implements OnInit {
 
-
+  posts : Post[];
+  columnsToDisplay = ['title', 'body', 'author','comments','likes','actions'];
   //Dependency Injection
   constructor(private firstService: FirstService,private router: Router) { }
 
   ngOnInit() {
-    this.firstService
-    .getlistFirstService()
-    .subscribe((data) => {
-      console.log('Retriving all data list');
-      console.log(data);
-    });
+    this.getAllPosts();
+  }
+
+  getAllPosts(){
+    this.firstService.getlistFirstService()
+      .subscribe((data : Post[]) => {
+         this.posts = data;
+         console.log(this.posts);
+      });
+    
+  }
+
+  editIssue()
+  {
+
   }
 
 }
